@@ -1,0 +1,11 @@
+<urlrewrite>
+
+    <!-- Let angular handle routing. Forward url to index.html unless it:
+        - starts with "/api"
+        - is an .html or .js file
+        - is the "/error" path -->
+    <rule>
+        <from>^/(?!api.*|.+\.html|.+\.js|error).+$</from>
+        <to>/index.html</to>
+    </rule>
+</urlrewrite>
